@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.logo{
+    width: 100px;
+    height: inherit;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.landing{
+    background-image: url(https://i.postimg.cc/CKrhn6B1/KOV00682.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 60%;
+}
