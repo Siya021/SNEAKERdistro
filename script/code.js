@@ -1,37 +1,28 @@
-let featured= document.querySelector('section#featured-post .row')
+let featured= document.querySelector('section#newCollection .row')
 let featuredPost = [
     {
         id: 1,
-        title: 'Taxi owner kills ex lover and kills himself',
-        image: 'https://i.postimg.cc/R0JvFccr/images.jpg',
-        description: 'Families of taxi boss were left shocked after the sudden passing of Mandla Khumalo the Taxi kingpin',
-        content: 'it is what it is',
-        date: new Date()
+        title: 'Converse Platform',
+        image: 'https://i.postimg.cc/wMWtRjw3/Untitled-1080-1080-px-1.webp',
+        price: 'R2000'
     },
     {
         id: 2,
-        title: 'Taxi owner kills ex lover and kills himself',
-        image: 'https://i.postimg.cc/R0JvFccr/images.jpg',
-        description: 'Families of taxi boss were left shocked after the sudden passing of Mandla Khumalo the Taxi kingpin',
-        content: 'it is what it is',
-        date: new Date()
+        title: 'New Balance 9060 Blue Haze',
+        image: 'https://i.postimg.cc/cJwGvkFn/image.webp',
+        price: 'R2000'
     },
     {
         id: 3,
-        title: 'Taxi owner kills ex lover and kills himself',
-        image: 'https://i.postimg.cc/R0JvFccr/images.jpg',
-        author: '',
-        description: 'Families of taxi boss were left shocked after the sudden passing of Mandla Khumalo the Taxi kingpin',
-        content: 'it is what it is',
-        date: new Date()
+        title: 'Chuck Taylor All Star Connstruct',
+        image: 'https://i.postimg.cc/KYWDRLGk/download-6.jpg',
+        price: 'R2000'
     },
     {
-        id: 3,
-        title: '',
-        image: 'https://i.postimg.cc/R0JvFccr/images.jpg',
-        author: '',
-        description: 'Families of taxi boss were left shocked after the sudden passing of Mandla Khumalo the Taxi kingpin',
-        content: 'it is what it is',
+        id: 4,
+        title: 'NIKE AIR MAX FURYOSA',
+        image: 'https://i.postimg.cc/1XKQmyGt/download-7.jpg',
+        price: 'R2000'
     }
 ];
 
@@ -41,9 +32,9 @@ featuredPost.forEach((post )=> {
                 <div class="card" style="width: 18rem;">
                     <img src="${post.image}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">"${post.title}"</h5>
-                      <p class="card-text">"${post.description}"</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">${post.title}</h5>
+                      <p class="card-text">${post.price}</p>
+                      <a href="#" class="btn">Go somewhere</a>
                     </div>
                   </div>
                 </div>`

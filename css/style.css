@@ -11,10 +11,77 @@ body{
     background-color: black;
     color: white;
 }
-.landing{
-    background-image: url(https://i.postimg.cc/CKrhn6B1/KOV00682.jpg);
+.navbar :hover{
+    color: orange;
+}
+.signup{
+    /* background-color: black; */
+    color: orange;
+    width: 100px;
+    padding: 20px;
+}
+.modal-body{
+    background-color: black;
+    color: white;
+}
+.modal-footer{
+    background-color: black;
+}
+.saveButton{
+    background-color: orange;
+    color: white;
+    font-size: 300;
+    width: 120px;
+    padding: 9px;
+}
+.closeButton{
+    background-color: black;
+    color: white;
+}
+.adminWall{
+    background-image: url(https://i.postimg.cc/zvmwXbzK/London-1024x683.webp);
     height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 60%;
+}
+.sneakercollection{
+    background-image: url(https://i.postimg.cc/d1bnfNg2/desktop-wallpaper-canadian-sneakerheads-on-how-they-re-surviving-quarantine.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 60%;
+}
+.landing{
+    background-image: url(https://i.postimg.cc/KjxvPc4M/291109303-1408619176231720-6716812370712594682-n.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 60%;
+}
+.products-list{
+    background-image: url(https://i.postimg.cc/CKrhn6B1/KOV00682.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 60%; 
+}
+.card{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.heading{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+#newCollection{
+    border: solid orange;
+    padding: 50px;
+    text-decoration: bold;
+}
+#newCollection h2{
+    text-decoration: underline orange;
 }

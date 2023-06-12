@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Admin</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><img src="../images/shoes store.png" alt="logo" class="logo" loading="lazy"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/checkout.html">Checkout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/admin.html">Admin</a>
+          </li>
+        </ul>
+        <!-- <span class="navbar-text">
+          Navbar text with an inline element <a href="">Sign Up</a>
+        </span> -->
+
+        <!-- Button trigger modal -->
+        <a class="signup" href=""data-bs-toggle="modal" data-bs-target="#Modal">Sign Up</a>
+          <!-- Modal -->
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <label for="name">First Name:</label>
+                  <input type="text" placeholder="Enter your first name">
+                  <label for="name">Last Name:</label>
+                  <input type="text" placeholder="Enter your last name">
+                  <label for="number">Contact Number</label>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="closeButton" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="saveButton">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+<section class="adminWall">
+  <div><h2>Admin</h2></div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="../script/admin.js"></script>
+</body>
+</html>
