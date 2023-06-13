@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 .logo{
     width: 100px;
     height: inherit;
@@ -23,6 +24,29 @@ body{
 .modal-body{
     background-color: black;
     color: white;
+    padding-left: 100px;
+    
+}
+textarea{
+    display: flex;
+    height: 80px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.messageBox{
+    align-items: center;
+    position: relative;
+    display: grid;
+    justify-content: center;
+}
+input[type=text],
+input[type=tel],
+input[type=email] {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .modal-footer{
     background-color: black;
