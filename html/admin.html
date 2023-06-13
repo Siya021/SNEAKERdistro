@@ -65,7 +65,84 @@
     </div>
 </nav>
 <section class="adminWall">
-  <div><h2>Admin</h2></div>
+  <div><h2>Admin</h2>
+  </div>
+</section>
+
+
+<section>
+  <div>
+    
+<button type="button" class="ADDbtn" data-bs-toggle="modal" data-bs-target="#adminModal">ADD SNEAKER</button>
+
+<div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="adminModal-title" id="exampleModalLabel">New Product</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="adminModal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Sneaker Image URL:</label>
+            <input type="text" class="form-control" id="imageURL">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Name:</label>
+            <input type="text" class="form-control" id="SneakerName">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Price:</label>
+            <input type="text" class="form-control" id="sneakerPrice">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">ADD PRODUCT</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+<section class="adminpage">
+  <h1 class="adminheading">Products Listing</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2"></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </section>
 
 
