@@ -51,16 +51,19 @@ input[type=email] {
 .modal-footer{
     background-color: black;
 }
-.saveButton{
+.subButton{
     background-color: orange;
     color: white;
     font-size: 300;
     width: 120px;
     padding: 9px;
 }
-.closeButton{
+.cancelButton{
     background-color: black;
-    color: white;
+    color: orange;
+    font-size: 300;
+    width: 120px;
+    padding: 9px;
 }
 .adminWall{
     background-image: url(https://i.postimg.cc/zvmwXbzK/London-1024x683.webp);
@@ -108,4 +111,38 @@ p{
 }
 #newCollection h2{
     text-decoration: underline orange;
+}
+.footer{
+    display:flex;
+    justify-content: flex;
+    width: auto;
+    height: auto;
+    border: white;
+    padding: 60px;
+}
+.aboutImage{
+    width: 300px;
+    height: 300px;
+}
+.clearfix{
+    display: flex;
+    justify-content: inherit;
+    padding: auto;
+    width: auto;
+}
+.fa{
+    font-size: 2rem !important;
+    width: 50px;
+    text-decoration: none;
+    color: orange;
+}
+.footer-bottom{
+    width:auto;
+    height: 60px;
+    background-color: black;
+    color:white;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
