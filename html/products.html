@@ -31,8 +31,39 @@
                 <a class="nav-link" href="../html/admin.html">Admin</a>
               </li>
             </ul>
-
+            <!-- Cart Modal -->
             <!-- Button trigger modal -->
+                      <a href="#" class="fa fa-shopping-cart" data-bs-toggle="modal" data-bs-target="#exampleModal"></a>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Price</th>
+                                  </tr>
+                                </thead>
+                              </table>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="checkoutBTN">Checkout</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+            <!-- Newsletter Button trigger modal -->
            <a class="signup" href=""data-bs-toggle="modal" data-bs-target="#Modal">Sign Up</a>
               <!-- Modal -->
             <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -66,51 +97,31 @@
     </nav>
 
     <section class="sneakercollection">
-        <h1>Products</h1>
-        <!-- <div class="row row-cols-1 row-cols-md-2 g-4">
-          <div class="col-3">
-            <div class="snkercard">
-              <img src="/images/adidas.jpg" class="card-img-top" alt="adidas">
-              <div class="card-body">
-                <h5 class="card-title">ADIDAS SNEAKERS</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="snkercard">
-              <img src="/images/convers.jpg" class="card-img-top" alt="converse">
-              <div class="card-body">
-                <h5 class="card-title">CONVERSE SNEAKERS</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="snkercard">
-              <img src="/images/newBalance.png" class="card-img-top" alt="newBalance">
-              <div class="card-body">
-                <h5 class="card-title">NEW BALANCE SNEAKERS</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="snkercard">
-              <img src="/images/nike.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">NIKE SNEAKERS</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-        </div> -->
+      <div id="products-menu" class="container-fluid">
+        <div class="row-cols-sm-6" id="products-buttons">
+          <button data-name="all" class="active" id="showAll">All</button>
+          <button data-name="Adidas" class="sneakerBTN">Adidas</button>
+          <button data-name="Converse" class="sneakerBTN">Converse</button>
+          <button data-name="New Balance" class="sneakerBTN">New Balance</button>
+          <button data-name="Nike" class="sneakerBTN">Nike</button>
+        </div>
+      </div>
+        <div>
+           <p class="paragraph">Get the best sneakers at affordable prices with us...</p>
+        </div>
     </section>
+
     <section class="products-Header">
       <h1>Products</h1>
     </section>
     <section id="products">
       <div class="row">
+        <!-- <div class="sneaker Adidas">Adidas Sneakers</div>
+        <div class="sneaker Converse">Converse Sneakers</div>
+        <div class="sneaker New Balance">New Balance Sneakers</div>
+        <div class="sneaker Nike">Nike Sneakers</div>
+        <div class="sneaker Adidas">Adidas Sneakers</div>
+        <div class="sneaker Nike">Nike Sneakers</div> -->
       </div>
     </section>
 
