@@ -1,44 +1,50 @@
-let sneakersList = document.getElementById('adminpage');
-let addSneaker = document.getElementById('');
-let remoseSNKER = document.getElementById('');
-let editSNKER = document.getElementById('');
-let sneakerNum = 1;
-let snkrImage = document.getElementById('');
-let brand = document.getElementById('');
-let prices = document.getElementById('');
+// Get the "ADD PRODUCT" button and table body
+var addButton = document.querySelector('#adminModal .btn-primary');
+var tableBody = document.querySelector('.table tbody');
 
-let sneakers = [
-    {
-        id: 1,
-        image: '',
-        Name: 'brand name',
-        price: 'R3 000'
-    },
-    {
-        id: 1,
-        image: '',
-        Name: 'brand name',
-        price: 'R3 000'
-    },
-    {
-        id: 1,
-        image: '',
-        Name: 'brand name',
-        price: 'R3 000'
-    },
-    {
-        id: 1,
-        image: '/images/converse-chuck-taylor-all-star-construct-A05094C.webp',
-        Name: 'brand name',
-        price: 'R3 000'
-    }
-];
+// Attach a click event listener to the "ADD PRODUCT" button
+addButton.addEventListener('click', function() {
+  // Get the input values for the new product
+  var imageURL = document.getElementById('imageURL').value;
+  var sneakerName = document.getElementById('SneakerName').value;
+  var sneakerPrice = document.getElementById('sneakerPrice').value;
 
-sneakers.forEach(sneaker => {
-    sneakersList.innerHTML += `
-    <tr>
-    <th>${sneaker.image}"alt="${sneaker.id}"</th>
-    <th>${sneaker.Name}</th>
-    <th>${sneaker.price}</th>
-    </tr>`
-})
+  // Create a new row element and populate it with the input values
+  var newRow = document.createElement('tr');
+  newRow.innerHTML = `
+    <th scope="row">${tableBody.children.length + 1}</th>
+    <td><img src="${imageURL}" alt="Product Image"></td>
+    <td>${sneakerName}</td>
+    <td>${sneakerPrice}</td>
+    <td><button class="editButton">Edit</button></td>
+    <td><button class="deleteButton">Delete</button></td>
+  `;
+
+  // Append the new row to the table body
+  tableBody.appendChild(newRow);
+
+  // Clear the input values
+  document.getElementById('imageURL').value = '';
+  document.getElementById('SneakerName').value = '';
+  document.getElementById('sneakerPrice').value = '';
+
+  // Attach event listeners to the new row's edit and delete buttons
+  var editButton = newRow.querySelector('.editButton');
+  var deleteButton = newRow.querySelector('.deleteButton');
+  editButton.addEventListener('click', handleEdit);
+  deleteButton.addEventListener('click', handleDelete);
+});
+
+// Function to handle the edit button click event
+function handleEdit(event) {
+  var row = event.target.closest('tr');
+  // Implement the edit functionality here
+  console.log('Edit button clicked for row:', row);
+}
+
+// Function to handle the delete button click event
+function handleDelete(event) {
+  var row = event.target.closest('tr');
+  // Implement the delete functionality here
+  console.log('Delete button clicked for row:', row);
+}

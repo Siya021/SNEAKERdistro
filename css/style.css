@@ -78,7 +78,6 @@ input[type=email] {
     height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 60%;
 }
 .landing{
     background-image: url(https://i.postimg.cc/KjxvPc4M/291109303-1408619176231720-6716812370712594682-n.jpg);
@@ -182,4 +181,46 @@ p{
     text-align: center;
     font-size: medium;
     background-color: black;
+}
+#products-buttons{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-left: 20px;
+}
+.showAll{
+ color: black;
+ background-color: orange;
+}
+.showAll :hover{
+    color: orange;
+    background-color: black;
+    animation-direction: reverse;
+}
+.sneakerBTN{
+    color: orange;
+    background-color: black;
+}
+.sneakerBTN :hover{
+    color: black;
+    background-color: orange;
+}
+.fimage{
+    width: 80px;
+    height: 80px;
+}
+.fimage1{
+    width: 200px;
+    height: 100px;
+}
+.submitBTN{
+    color: white;
+    background-color: orange;
+    font-weight: 300;
+    padding: 20px;
+}
+.paragraph{
+    font-size: x-large;
+    color: orange;
+    animation-direction: reverse 0.30s;
 }
