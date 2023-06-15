@@ -30,15 +30,15 @@
             </ul>
             <!-- Cart Modal -->
             <!-- Button trigger modal -->
-                      <a href="#" class="fa fa-shopping-cart" data-bs-toggle="modal" data-bs-target="#exampleModal"></a>
+                      <a href="#" class="fa fa-shopping-cart" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addToCart()"></a>
                       
                       <!-- Modal -->
                       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Cart</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             </div>
                             <div class="modal-body">
                               <table class="table">
@@ -53,7 +53,7 @@
                               </table>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <p class="total-price">Total: R0.00</p>
                               <button type="button" class="checkoutBTN">Checkout</button>
                             </div>
                           </div>
@@ -131,10 +131,10 @@
               <div class="col-lg-6">
                 <h2>Follow Us</h2>
                 <ul>
-                  <a href="#" class="fa fa-facebook-square"></a>
-                  <a href="#" class="fa fa-git-square"></a>
-                  <a href="#" class="fa fa-instagram"></a>
-                  <a href="#" class="fa fa-twitter-square"></a>
+                  <a href="https://www.facebook.com/" class="fa fa-facebook-square"></a>
+                  <a href="https://github.com/" class="fa fa-git-square"></a>
+                  <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                  <a href="https://twitter.com" class="fa fa-twitter-square"></a>
                 </ul>
               </div>
               <div class="col-lg-6">

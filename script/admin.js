@@ -124,18 +124,7 @@ JSON.parse(localStorage.getItem('sneakers')) :
 const newRow = document.querySelector('#trow');
 
 
-addToTable()
-
-// function saveToLocalStorage() {
-//   localStorage.setItem('products', JSON.stringify(products));
-// }
-
-function addToTable(){
-  products.forEach((data,i)=>{
-
-  })
-}
-
+addToTable();
 
 function addToTable() {
   newRow.innerHTML = '';
@@ -150,16 +139,54 @@ function addToTable() {
       <td>${data.brand}</td>
       <td>${data.title}</td>
       <td>${data.price}</td>
-      <td><button class="editButton btn-outline-warning" onclick=editNew()>Edit</button></td>
+      <td>    <button type="button" class="ADDbtn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#adminModal">Edit</button>
+      <div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="adminModal-title" id="exampleModalLabel">Edit Product</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="adminModal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Sneaker Image URL:</label>
+                  <input type="text" class="form-control" id="imageURL">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Brand:</label>
+                  <input type="text" class="form-control" id="SneakerName">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Title:</label>
+                  <input type="text" class="form-control" id="SneakerName">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Price:</label>
+                  <input type="text" class="form-control" id="sneakerPrice">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
+              <button type="button" id="adminModal" class="btn btn-outline-warning">Save</button>
+            </div>
+          </div>
+        </div>
+      </div></td> 
       <td><button class="deleteButton btn-warning">Delete</button></td>
       </tr>
-    `;
+    `});
+
     let editButton = newRow.querySelector('.editButton');
     let deleteButton = newRow.querySelector('.deleteButton');
-    editButton.addEventListener('click', handleEdit);
-    deleteButton.addEventListener('click', handleDelete);
-  
-  })
+
+    editButton.forEach((button, index) => {
+      button.addEventListener('click', () => handleEdit(index));
+    });
+    deleteButton.forEach((button, index) => {
+      button.addEventListener('click', () => handleDelete(index));
+    }); 
 }
     
 // }
@@ -170,48 +197,33 @@ addButton.addEventListener('click', function() {
   let sneakerPrice = document.getElementById('sneakerPrice').value;
 
   let newSneaker = {
+    id: products.length + 1,
     imageURL: imageURL,
     sneakerName: sneakerName,
     sneakerPrice: sneakerBrand,
     sneakerPrice: sneakerPrice
   };
 
-  
   products.push(newSneaker);
 
+
+  localStorage.setItem('sneakers', JSON.stringify(products));
   
-  saveToLocalStorage();
-
-  
-  let newRow = document.createElement('tr');
-  newRow.innerHTML = `
-    <th scope="row">${tableBody.children.length + 1}</th>
-    <td><img src="${imageURL}" alt="Product Image" class="productIMG"></td>
-    <td>${sneakerName}</td>
-    <td>${sneakerBrand}</td>
-    <td>${sneakerPrice}</td>
-    <td><button class="editButton">Edit</button></td>
-    <td><button class="deleteButton">Delete</button></td>
-  `;
-
-
-  tableBody.appendChild(newRow);
-
+  addToTable();
 
   document.getElementById('imageURL').value = '';
-  document.getElementById('SneakerName').value = '';
   document.getElementById('sneakerBrand').value = '';
+  document.getElementById('sneakerName').value = '';
   document.getElementById('sneakerPrice').value = '';
-
-
-  let editButton = newRow.querySelector('.editButton');
-  let deleteButton = newRow.querySelector('.deleteButton');
-  editButton.addEventListener('click', handleEdit);
-  deleteButton.addEventListener('click', handleDelete);
 });
 
-function handleEdit(event) {
-  const row = event.target.closest('tr');
-
-  console.log('Edit button clicked for row:', row);
+function handleEdit(index) {
+  const row = products[index];
 }
+ function handleDelete(index) {
+  products.splice(index, 1);
+
+  localStorage.setItem('sneakers', JSON.stringify(products));
+
+  addToTable()
+ }

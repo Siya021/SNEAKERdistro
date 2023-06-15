@@ -113,97 +113,79 @@ let sneakerList =
         price: 'R2099,00',
     },
   ]
-localStorage.setItem('sneakers',JSON.stringify(sneakerList))
-document.addEventListener('DOMContentLoaded', function() {
+  localStorage.setItem('sneakers', JSON.stringify(sneakerList));
+
+  document.addEventListener('DOMContentLoaded', function() {
     let buttons = document.getElementsByClassName('sneakerBTN');
     let items = document.getElementsByClassName('sneaker');
-
-    for (let i = 0; i < buttons.length; s++) {
-      buttons[s].addEventListener('click', handleFilterButtonClick);
+  
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', handleFilterButtonClick);
     }
-
-    // Filter the shoes when button clicked
+  
+    for (let i = 0; i < items.length; i++) {
+    }
+  
     function handleFilterButtonClick(event) {
-       let filterName = event.target.getAttribute('data-name');
-
-    
-      for ( let i = 0; i < buttons.length; i++) {
+      let filterName = event.target.getAttribute('data-name');
+  
+      for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove('active');
       }
       event.target.classList.add('active');
-
-      for (let i = 0; i < items.length; s++) {
+  
+      for (let i = 0; i < items.length; i++) {
         let itemName = items[i].classList[1];
         if (filterName === 'all' || itemName === filterName) {
           items[i].style.display = 'block';
-        } else if(filterName === 'Nike' ){
-          items[i].style.display = 'block';
-        }
-        {
+        } else {
           items[i].style.display = 'none';
         }
       }
     }
   });
-
-  function displayProducts(){
-  let sneakers = document.querySelector('section#products .row')
-  try{
-    sneakerList.forEach((sneaker) => {
+  
+  function displayProducts() {
+    let sneakers = document.querySelector('section#products .row');
+    try {
+      sneakerList.forEach((sneaker) => {
         sneakers.innerHTML += `
-       <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="${sneaker.image}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">${sneaker.brand}</h5>
-                          <p class="card-text">${sneaker.title}</p>
-                          <p class="card-text">${sneaker.price}</p>
-                          <a href="#" class="btn btn-outline-warning" onclick('add2Cart')>Add to Cart</a>
-                        </div>
-                      </div>
-                    </div>`
-    })
-  }catch(e) {
-    location.reload()
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="${sneaker.image}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">${sneaker.brand}</h5>
+                <p class="card-text">${sneaker.title}</p>
+                <p class="card-text">${sneaker.price}</p>
+                <a href="#" class="btn btn-outline-warning" onclick="add2Cart()">Add to Cart</a>
+              </div>
+            </div>
+          </div>`;
+      });
+    } catch (e) {
+      location.reload();
+    }
   }
-}
-let tableBody = document.querySelector('.modal-body table tbody');
-let checkoutbutton = document.querySelector('.checkoutBTN')
-
-let cartItems = [];
-let totalPrice = 0;
-
-
-function addItemToCart(item) {
-  cartItems.push(item);
-  totalPrice += parseFloat(item.price.slice(1));
-
-  let newRow = document.createElement('tr');
-  newRow.innerHTML = `
-    <td>${cartItems.length}</td>
-    <td><img src="${item.image}" alt="${item.brand}"></td>
-    <td>${item.title}</td>
-    <td>${item.price}</td>
-  `;
-  tableBody.appendChild(newRow);
-}
-
-function updateCart() {
-    tableBody.innerHTML = '';
-
-
-cartItems.forEach((item, index) => {
+  
+  let tableBody = document.querySelector('.modal-body table tbody');
+  let cartItems = [];
+  let totalPrice = 0;
+  
+  function add2Cart() {
+    let selectedSneaker = sneakerList.find((sneaker) => sneaker.title === event.target.parentNode.children[1].textContent);
+    if (selectedSneaker) {
+      addItemToCart(selectedSneaker);
+    }
+  }
+  
+  function addItemToCart(item) {
+    cartItems.push(item);
+    totalPrice += parseFloat(item.price.slice(1));
+  
     let newRow = document.createElement('tr');
     newRow.innerHTML = `
-      <td>${index + 1}</td>
-      <td><img src="${item.image}" alt="${item.brand}"></td>
+      <td>${cartItems.length}</td>
+      <td><img src="${item.image}" alt="${item.brand}" class="cart-item-img"></td>
       <td>${item.title}</td>
-      <td>${item.price}</td>
-    `;
-    tableBody.appendChild(newRow);
-  });
-
-  
-  let totalPriceElement = document.querySelector('.modal-footer .total-price');}
-
-  displayProducts();
+      <td>${item.price}</td>`
+  };
