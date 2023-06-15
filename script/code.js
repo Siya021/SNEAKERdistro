@@ -34,9 +34,10 @@ featuredPost.forEach((post )=> {
                     <div class="card-body">
                       <h5 class="card-title">${post.title}</h5>
                       <p class="card-text">${post.price}</p>
-                      <a href="#" class="btn">Go somewhere</a>
+                      <a href="/html/products.html" class="btn btn-outline-warning">Go to shop</a>
                     </div>
                   </div>
                 </div>`
 
 })
+ 

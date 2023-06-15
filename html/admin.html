@@ -25,9 +25,6 @@
             <a class="nav-link" href="../html/products.html">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../html/checkout.html">Checkout</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="../html/admin.html">Admin</a>
           </li>
         </ul>
@@ -42,7 +39,7 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -72,39 +69,41 @@
 
 <section>
   <div>
-    
-<button type="button" class="ADDbtn" data-bs-toggle="modal" data-bs-target="#adminModal">ADD SNEAKER</button>
-
-<div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="adminModal-title" id="exampleModalLabel">New Product</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="adminModal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Sneaker Image URL:</label>
-            <input type="text" class="form-control" id="imageURL">
+    <button type="button" class="ADDbtn" data-bs-toggle="modal" data-bs-target="#adminModal">ADD SNEAKER</button>
+    <div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="adminModal-title" id="exampleModalLabel">New Product</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Name:</label>
-            <input type="text" class="form-control" id="SneakerName">
+          <div class="adminModal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Sneaker Image URL:</label>
+                <input type="text" class="form-control" id="imageURL">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Brand:</label>
+                <input type="text" class="form-control" id="SneakerName">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Title:</label>
+                <input type="text" class="form-control" id="SneakerName">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Price:</label>
+                <input type="text" class="form-control" id="sneakerPrice">
+              </div>
+            </form>
           </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Price:</label>
-            <input type="text" class="form-control" id="sneakerPrice">
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
+            <button type="button" id="adminModal" class="btn btn-warning">ADD PRODUCT</button>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">ADD PRODUCT</button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
 
   </div>
@@ -115,32 +114,17 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">#</th> 
         <th scope="col">Image</th>
-        <th scope="col">Name</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Title</th>
         <th scope="col">Price</th>
         <th scope="col">Edit</th>
         <th scope="col">Delete</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2"></td>
-        <td></td>
-      </tr>
+    <tbody id="trow">
+      
     </tbody>
   </table>
 </section>
@@ -154,7 +138,7 @@
     <div class="f-container">
       <h2>Follow Us</h2>
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <ul>
               <a href="#" class="fa fa-facebook-square"></a>
               <a href="#" class="fa fa-git-square"></a>
@@ -162,7 +146,7 @@
               <a href="#" class="fa fa-twitter-square"></a>
             </ul>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <h4>ADDRESS</h4>
             <Address>
               10721 Dubu Crescent, Browns Farm, Phillipi, Cape Town, Western Cape, 7750
@@ -171,14 +155,6 @@
               
             </ul>
           </div>
-          <div class="col-lg-4">
-            <ul>
-              <a href="#" class="fa fa-facebook-square"></a>
-              <a href="#" class="fa fa-git-square"></a>
-              <a href="#" class="fa fa-instagram"></a>
-              <a href="#" class=""></a>
-            </ul>
-          </div> 
         </div>   
     </div>   
   </footer>     
